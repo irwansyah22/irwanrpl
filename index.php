@@ -6,26 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Product Skincare</h2>
-    <table border="1">
-        <tr>
-            <th>Nama barang</th>
-            <th>Id Product</th>
-
-        </tr>
-
-        <?php
-        include "koneksi.php";
-        $query = mysqli_query($koneksi, "select * from product");
-        while($data = mysqli_fetch_array($query)){
-         ?>
-         <tr>
-            <td><?php echo $data["nama"]?></td>
-            <td><?php echo $data["id_kategori"]?></td>
-         </tr>  
-         <?php 
-        }
-        
-        ?>
+<form action="submit.php" method="POST">
+  <label for="name">Nama:</label>
+  <input type="text" id="name" name="name">
+</br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+</br>
+  <label for="pesan">Pesan:</label>
+  <input type="pesan" id="pesan" name="pesan">
+  <button type="submit">Submit</button>
+</form>
+</form> 
 </body>
 </html>
